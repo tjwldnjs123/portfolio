@@ -6,7 +6,6 @@ import NavList from "./components/NavList";
 const AboutMe = () => {
   return (
     <Background>
-      <NavList />
       <AboutMeContainer></AboutMeContainer>
     </Background>
   );
