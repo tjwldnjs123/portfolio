@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+import { NavLink } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 
@@ -6,11 +7,21 @@ const NavList = () => {
   const navigate = useNavigate();
   return (
     <NavListContainer>
-      <ul>
-        <li onClick={() => navigate("/")}>Home</li>
-        <li onClick={() => navigate("/about-me")}>About Me :)</li>
-        <li onClick={() => navigate("/project")}>Project</li>
-      </ul>
+      <div className="nav-container">
+        <NavLink to="/">Home</NavLink>
+        <NavLink
+          className={({ isActive }) => (isActive ? "bold" : "")}
+          to="/about-me"
+        >
+          About Me :)
+        </NavLink>
+        <NavLink
+          className={({ isActive }) => (isActive ? "bold" : "")}
+          to="/project"
+        >
+          Project
+        </NavLink>
+      </div>
     </NavListContainer>
   );
 };
@@ -18,6 +29,8 @@ const NavList = () => {
 export default NavList;
 
 const NavListContainer = styled.div`
+  background-color: #000;
+  opacity: 50%;
   position: fixed;
   display: flex;
   flex-direction: column;
@@ -26,11 +39,20 @@ const NavListContainer = styled.div`
   height: 100vh;
   width: 20%;
 
-  ul {
-    li {
+  .nav-container {
+    display: flex;
+    flex-direction: column;
+
+    a {
       padding: 20px;
       font-size: 20px;
       color: #fff;
+      cursor: pointer;
+    }
+
+    .bold {
+      font-size: 30px;
+      font-weight: 700;
     }
   }
 `;

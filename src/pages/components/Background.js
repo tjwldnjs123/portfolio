@@ -19,6 +19,8 @@ const BackgroundContainer = styled.div`
   width: 100%;
   height: 100vh;
   background-image: url(${backgroundImg});
+  background-repeat: no-repeat;
+  background-size: cover;
 
   .content {
     width: 100%;
