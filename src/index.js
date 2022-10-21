@@ -8,6 +8,7 @@ import * as Theme from "./styles/Theme";
 ReactDOM.render(
   <>
     <GlobalStyle />
+
     <ThemeProvider theme={Theme}>
       <Router />
     </ThemeProvider>
