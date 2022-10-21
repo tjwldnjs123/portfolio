@@ -17,6 +17,5 @@ export default AboutMe;
 const AboutMeContainer = styled.div`
   border: 1px solid red;
   height: 100vh;
-
   display: flex;
 `;
