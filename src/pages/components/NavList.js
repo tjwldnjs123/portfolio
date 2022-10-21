@@ -1,12 +1,15 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 
 const NavList = () => {
+  const navigate = useNavigate();
   return (
     <NavListContainer>
       <ul>
-        <li>About Me :)</li>
-        <li>Project</li>
+        <li onClick={() => navigate("/")}>Home</li>
+        <li onClick={() => navigate("/about-me")}>About Me :)</li>
+        <li onClick={() => navigate("/project")}>Project</li>
       </ul>
     </NavListContainer>
   );

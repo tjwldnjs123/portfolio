@@ -1,6 +1,6 @@
 import React from "react";
 import { Rotate } from "react-reveal";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import Background from "./components/Background";
 
@@ -21,7 +21,13 @@ const Main = () => {
         </li>
         <li>
           <Rotate>
-            <h1>About me :)</h1>
+            <a
+              href="https://velog.io/@tjwldnjs4457/series"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              blog
+            </a>
           </Rotate>
         </li>
       </ListContainer>
