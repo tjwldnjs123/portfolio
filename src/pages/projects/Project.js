@@ -6,6 +6,7 @@ import ProjectList from "./ProjectList";
 
 const Project = () => {
   const [projectList, setProjectList] = useState([]);
+  const [active, setActive] = useState("");
   useEffect(() => {
     fetch("/data/project.json")
       .then((res) => res.json())
@@ -15,8 +16,12 @@ const Project = () => {
   return (
     <Background>
       <ProjectContainer>
-        <ul className="project-content">
-          <ProjectList projectList={projectList} />
+        <ul className={active.length > 1 ? "" : "project-content"}>
+          <ProjectList
+            projectList={projectList}
+            active={active}
+            setActive={setActive}
+          />
         </ul>
       </ProjectContainer>
     </Background>
@@ -26,14 +31,13 @@ const Project = () => {
 export default Project;
 
 const ProjectContainer = styled.div`
-  height: 100vh;
-
   .project-content {
+    border: 1px solid red;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     height: 70%;
-    margin-top: 10%;
+    margin-top: 40%;
   }
 `;

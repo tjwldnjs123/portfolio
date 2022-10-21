@@ -2,9 +2,7 @@ import React, { useState } from "react";
 import { GiFallingStar } from "react-icons/gi";
 import styled from "styled-components";
 
-const ProjectList = ({ projectList }) => {
-  const [active, setActive] = useState("");
-
+const ProjectList = ({ projectList, active, setActive }) => {
   return (
     <ProjectListContainer>
       {projectList.map((project) => {
@@ -62,10 +60,11 @@ const ProjectListContainer = styled.li`
     }
 
     .project-content-container {
-      position: relative;
-
-      width: 800px;
-      height: 600px;
+      position: fixed;
+      top: 100px;
+      left: 20%;
+      width: 900px;
+      height: 700px;
       border: 1px solid red;
     }
   }
