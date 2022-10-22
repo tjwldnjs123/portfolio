@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { GiFallingStar } from "react-icons/gi";
+import { AiOutlineArrowRight } from "react-icons/ai";
 import { BsGithub } from "react-icons/bs";
 import styled from "styled-components";
 
@@ -47,6 +48,8 @@ const ProjectList = ({ projectList, active, setActive }) => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
+                  <p>github으로 바로가기</p>
+                  <AiOutlineArrowRight className="arrow" />
                   <BsGithub />
                 </a>
               </div>
@@ -110,7 +113,7 @@ const ProjectListContainer = styled.li`
 
       video {
         width: 100%;
-        height: 500px;
+        height: 400px;
       }
 
       .description {
@@ -126,14 +129,29 @@ const ProjectListContainer = styled.li`
         }
 
         li {
+          font-size: 17px;
           text-align: center;
-          line-height: 20px;
+          line-height: 25px;
         }
       }
 
       a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         text-align: center;
         font-size: 25px;
+
+        .arrow {
+          margin-right: 10px;
+          font-size: 12px;
+        }
+
+        p {
+          margin-right: 10px;
+          font-size: 12px;
+          color: #2786ff;
+        }
       }
     }
   }

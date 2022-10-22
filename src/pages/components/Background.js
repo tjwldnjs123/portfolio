@@ -17,7 +17,7 @@ export default Background;
 const BackgroundContainer = styled.div`
   display: flex;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   background-image: url(${backgroundImg});
   background-repeat: no-repeat;
   background-size: cover;
