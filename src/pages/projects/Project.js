@@ -1,14 +1,13 @@
 import React, { useEffect, useState } from "react";
 import Background from "../components/Background";
 import styled from "styled-components";
-import { useNavigate } from "react-router-dom";
 import ProjectList from "./ProjectList";
 
 const Project = () => {
   const [projectList, setProjectList] = useState([]);
   const [active, setActive] = useState("");
   useEffect(() => {
-    fetch("/data/project.json")
+    fetch("/portfolio/data/project.json")
       .then((res) => res.json())
       .then((data) => setProjectList(data.project));
   }, []);

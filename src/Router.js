@@ -6,7 +6,7 @@ import Project from "./pages/projects/Project";
 
 function Router() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="portfolio">
       <Routes>
         <Route path="/" element={<Main />} />
         <Route path="/about-me" element={<AboutMe />} />
