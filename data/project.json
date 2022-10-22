@@ -1,0 +1,60 @@
+{
+  "project": [
+    {
+      "title": "justgram",
+      "content": "video/justgram.mov",
+      "description": [
+        "로그인페이지 유효성 검사 완료 후 버튼 활성화",
+        "메인페이지 목데이터 활용하여 피드 구현",
+        "사용자가 댓글 입력 후 enter 를 누르거나 왼쪽의 버튼 클릭 시 댓글 추가"
+      ],
+      "github": "https://github.com/tjwldnjs123/justgram-react"
+    },
+    {
+      "title": "ale6ix",
+      "content": "video/ale6ix.mov",
+      "description": [
+        "메인페이지 하단 부분 레이아웃",
+        "제품 상세페이지 구매하기 통신",
+        "장바구니 레이아웃 및 통신 (전체삭제, 체크 된 상품 삭제, 개별삭제, 수량변경)",
+        "검색 페이지 레이아웃 및 통신"
+      ],
+      "github": "https://github.com/tjwldnjs123/justcode-ale6ix-front"
+    },
+    {
+      "title": "저기어때",
+      "content": "video/저기어때.mov",
+      "description": [
+        "회원가입 구현",
+        "로그인 구현 (+ 카카오로그인 구현)",
+        "약관동의 페이지 레이아웃 및 체크박스 구현",
+        "핸드폰 인증번호 통신",
+        "마이페이지 레이아웃 및 닉네임,예약자 이름,휴대폰번호 변경 구현",
+        "마이페이지 예약목록 삭제 구현"
+      ],
+      "github": "https://github.com/tjwldnjs123/justcode-6-2nd-team7-front"
+    },
+    {
+      "title": "playkeyboard",
+      "content": "video/playkeyboard.mov",
+      "description": [
+        "fetch 적용해 데이터를 받아 카테고리 구현",
+        "카테고리 클릭 시 해당 카테고리 활성화",
+        "카테고리 클릭 시 해당 카드 나오게 query이용하여 구현",
+        "카드 클릭 시 navigate 적용하여 detail페이지로 이동",
+        "반응형 구현(iphone~tablet)"
+      ],
+      "github": "https://github.com/tjwldnjs123/playkeyboard-2team"
+    },
+    {
+      "title": "bodit",
+      "content": "video/bodit.mov",
+      "description": [
+        "달력 모달 창 react-datepicker 라이브러리로 구현",
+        "moment.js로 날짜 구현",
+        "그래프 및 달력 반응형(desktop~iphone)"
+      ],
+      "github": "https://github.com/tjwldnjs123/bodit-team2"
+    }
+  ]
+}
