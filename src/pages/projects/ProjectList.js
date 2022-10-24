@@ -113,15 +113,16 @@ const ProjectListContainer = styled.li`
       position: fixed;
       top: 100px;
       left: 25%;
-      width: 900px;
-      height: 700px;
+      min-width: 70%;
+      height: 80%;
+      border: 1px solid red;
 
       @media (max-width: 1080px) {
-        width: 70%;
+        width: 800px;
       }
 
       @media (max-width: ${({ theme }) => theme.tablet}) {
-        width: 70%;
+        width: 500px;
       }
       video {
         width: 100%;

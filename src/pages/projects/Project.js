@@ -33,15 +33,18 @@ export default Project;
 
 const ProjectContainer = styled.div`
   height: 100vh;
+  min-width: 100%;
 
   .project-header {
     display: felx;
     justify-content: center;
     align-items: center;
+    width: 100%;
     height: 100px;
   }
 
   .project-content {
+    width: 100%;
     height: 100%;
     display: flex;
     justify-content: center;
