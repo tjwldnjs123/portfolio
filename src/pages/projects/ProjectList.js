@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { GiFallingStar } from "react-icons/gi";
 import { AiOutlineArrowRight } from "react-icons/ai";
 import { BsGithub } from "react-icons/bs";
@@ -115,6 +115,10 @@ const ProjectListContainer = styled.li`
       left: 25%;
       width: 900px;
       height: 700px;
+
+      @media (max-width: 1080px) {
+        width: 70%;
+      }
 
       @media (max-width: ${({ theme }) => theme.tablet}) {
         width: 70%;
