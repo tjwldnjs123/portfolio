@@ -9,7 +9,7 @@ const ProjectList = ({ projectList, active, setActive }) => {
     <ProjectListContainer>
       {projectList.map((project) => {
         return (
-          <div className="project-list-container">
+          <div key={project.id} className="project-list-container">
             <div
               className="project-title"
               onClick={(e) => {
@@ -39,7 +39,7 @@ const ProjectList = ({ projectList, active, setActive }) => {
                   <p>내가 구현한 페이지 💫</p>
                   <ul>
                     {project.description.map((content) => {
-                      return <li>{content}</li>;
+                      return <li key={content}>{content}</li>;
                     })}
                   </ul>
                 </div>
@@ -66,9 +66,9 @@ export default ProjectList;
 const ProjectListContainer = styled.li`
   display: flex;
   justify-content: space-around;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   width: 100%;
-  padding-right: 10%;
+  padding-left: 3%;
   color: #fff;
 
   .project-list-container {
@@ -88,6 +88,10 @@ const ProjectListContainer = styled.li`
         font-size: 20px;
         cursor: pointer;
 
+        @media (max-width: ${({ theme }) => theme.tablet}) {
+          font-size: 13px;
+        }
+
         &:hover {
           color: #2786ff;
         }
@@ -105,15 +109,23 @@ const ProjectListContainer = styled.li`
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      align-items: center;
       position: fixed;
       top: 100px;
       left: 25%;
       width: 900px;
       height: 700px;
 
+      @media (max-width: ${({ theme }) => theme.tablet}) {
+        width: 70%;
+      }
       video {
         width: 100%;
         height: 400px;
+
+        @media (max-width: ${({ theme }) => theme.tablet}) {
+          width: 90%;
+        }
       }
 
       .description {

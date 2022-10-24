@@ -3,6 +3,7 @@ import { Rotate } from "react-reveal";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import backgroundImg from "../assets/backgroundImg.png";
+import { BsGithub } from "react-icons/bs";
 
 const Main = () => {
   const navigate = useNavigate();
@@ -29,6 +30,17 @@ const Main = () => {
           </a>
         </Rotate>
       </li>
+      <li>
+        <Rotate>
+          <a
+            href="https://github.com/tjwldnjs123"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <BsGithub />
+          </a>
+        </Rotate>
+      </li>
     </ListContainer>
   );
 };
@@ -48,5 +60,6 @@ const ListContainer = styled.ul`
     padding: 10px;
     font-size: 30px;
     color: #fff;
+    cursor: pointer;
   }
 `;

@@ -1,10 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import { NavLink } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 
 const NavList = () => {
-  const navigate = useNavigate();
   return (
     <NavListContainer>
       <div className="nav-container">
@@ -48,11 +46,19 @@ const NavListContainer = styled.div`
       font-size: 20px;
       color: #fff;
       cursor: pointer;
+
+      @media (max-width: ${({ theme }) => theme.tablet}) {
+        font-size: 15px;
+      }
     }
 
     .bold {
       font-size: 30px;
       font-weight: 700;
+
+      @media (max-width: ${({ theme }) => theme.tablet}) {
+        font-size: 16px;
+      }
     }
   }
 `;

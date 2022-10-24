@@ -10,7 +10,7 @@ const AboutMe = () => {
 
         <section className="about-me-container">
           <div className="content">
-            <div class="title">
+            <div className="title">
               <p className="bold">프론트엔드 개발자 서지원</p>
               <p>개발에 대한 흥미 많고 열정 가득한 서지원 입니다.</p>
             </div>
@@ -101,9 +101,7 @@ const AboutMeContainer = styled.div`
         text-align: center;
 
         h1 {
-          /* margin: 0 0 100px; */
           text-align: center;
-          /* text-transform: uppercase; */
         }
       }
 
