@@ -108,28 +108,26 @@ const ProjectListContainer = styled.li`
     .project-content-container {
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
       align-items: center;
       position: fixed;
       top: 100px;
       left: 25%;
-      min-width: 70%;
+      width: 70%;
       height: 80%;
-      border: 1px solid red;
 
       @media (max-width: 1080px) {
-        width: 800px;
+        width: 65%;
       }
 
       @media (max-width: ${({ theme }) => theme.tablet}) {
-        width: 500px;
+        width: 50%;
       }
       video {
         width: 100%;
-        height: 400px;
+        height: 70%;
 
         @media (max-width: ${({ theme }) => theme.tablet}) {
-          width: 90%;
+          width: 80%;
         }
       }
 
@@ -137,16 +135,18 @@ const ProjectListContainer = styled.li`
         display: flex;
         flex-direction: column;
         align-items: center;
-        height: 300px;
+        justify-content: center;
+        width: 100%;
+        height: 40%;
         padding-top: 1%;
 
         p {
-          font-size: 20px;
+          font-size: 1.5rem;
           padding: 2%;
         }
 
         li {
-          font-size: 17px;
+          font-size: 1rem;
           text-align: center;
           line-height: 25px;
         }
