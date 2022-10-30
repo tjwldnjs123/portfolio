@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import { GiFallingStar } from "react-icons/gi";
 import { AiOutlineArrowRight } from "react-icons/ai";
 import { BsGithub } from "react-icons/bs";
 import styled from "styled-components";
+import Memoir from "./Memoir";
 
 const ProjectList = ({ projectList, active, setActive }) => {
+  const [modal, setModal] = useState(false);
+
   return (
     <ProjectListContainer>
       {projectList.map((project) => {
@@ -36,12 +39,10 @@ const ProjectList = ({ projectList, active, setActive }) => {
                   <source src={project.content} type="video/mp4" />
                 </video>
                 <div className="description">
-                  <p>내가 구현한 페이지 💫</p>
-                  <ul>
-                    {project.description.map((content) => {
-                      return <li key={content}>{content}</li>;
-                    })}
-                  </ul>
+                  <button onClick={() => setModal((prev) => !prev)}>
+                    회고록 바로가기 💫
+                  </button>
+                  {modal && <Memoir project={project} setModal={setModal} />}
                 </div>
                 <a
                   href={project.github}
@@ -123,8 +124,8 @@ const ProjectListContainer = styled.li`
         width: 50%;
       }
       video {
-        width: 100%;
-        height: 70%;
+        width: 65%;
+        height: 60%;
 
         @media (max-width: ${({ theme }) => theme.tablet}) {
           width: 80%;
@@ -140,15 +141,18 @@ const ProjectListContainer = styled.li`
         height: 40%;
         padding-top: 1%;
 
-        p {
-          font-size: 1.5rem;
+        button {
           padding: 2%;
-        }
+          background-color: transparent;
+          border-radius: 50%;
+          border: none;
+          font-size: 1.5rem;
+          color: lightgray;
+          cursor: pointer;
 
-        li {
-          font-size: 1rem;
-          text-align: center;
-          line-height: 25px;
+          &:hover {
+            color: #2786ff;
+          }
         }
       }
 

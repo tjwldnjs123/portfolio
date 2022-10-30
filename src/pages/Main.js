@@ -1,5 +1,5 @@
 import React from "react";
-import { Rotate } from "react-reveal";
+import Zoom from "react-reveal/Zoom";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import backgroundImg from "../assets/backgroundImg.png";
@@ -10,36 +10,34 @@ const Main = () => {
   return (
     <ListContainer>
       <li onClick={() => navigate("/about-me")}>
-        <Rotate>
-          <h1>About me :)</h1>
-        </Rotate>
+        <Zoom left>
+          <h1>About me</h1>
+        </Zoom>
       </li>
       <li onClick={() => navigate("/project")}>
-        <Rotate>
+        <Zoom left>
           <h1>Project</h1>
-        </Rotate>
+        </Zoom>
       </li>
       <li>
-        <Rotate>
-          <a
-            href="https://velog.io/@tjwldnjs4457/series"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            blog
-          </a>
-        </Rotate>
+        <a
+          href="https://velog.io/@tjwldnjs4457/series"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Zoom left>blog</Zoom>
+        </a>
       </li>
       <li>
-        <Rotate>
-          <a
-            href="https://github.com/tjwldnjs123"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+        <a
+          href="https://github.com/tjwldnjs123"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Zoom left>
             <BsGithub />
-          </a>
-        </Rotate>
+          </Zoom>
+        </a>
       </li>
     </ListContainer>
   );

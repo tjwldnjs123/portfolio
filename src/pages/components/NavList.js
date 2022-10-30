@@ -11,7 +11,7 @@ const NavList = () => {
           className={({ isActive }) => (isActive ? "bold" : "")}
           to="/about-me"
         >
-          About Me :)
+          About Me
         </NavLink>
         <NavLink
           className={({ isActive }) => (isActive ? "bold" : "")}

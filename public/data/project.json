@@ -4,22 +4,41 @@
       "id": 1,
       "title": "justgram",
       "content": "video/justgram.mov",
-      "description": [
+      "implementation": [
         "로그인페이지 유효성 검사 완료 후 버튼 활성화",
         "메인페이지 목데이터 활용하여 피드 구현",
         "사용자가 댓글 입력 후 enter 를 누르거나 왼쪽의 버튼 클릭 시 댓글 추가"
       ],
+      "learned": [
+        "React Router 라우팅 기능을 적용",
+        "Link(내부경로),와 a태그(외부경로)의 차이점 학습",
+        "react hook 사용하여 상태관리 학습",
+        "조건부 렌더링 학습",
+        "Sass의 nesting 학습 ",
+        "if 조건문 대신 삼항연산자 학습하여 적용",
+        "map메서드로 목데이터 렌더링",
+        "서버통신 학습(로그인하면 id,password localstorage에 저장)"
+      ],
+
       "github": "https://github.com/tjwldnjs123/justgram-react"
     },
     {
       "id": 2,
       "title": "ale6ix",
       "content": "video/ale6ix.mov",
-      "description": [
+      "implementation": [
         "메인페이지 하단 부분 레이아웃",
         "제품 상세페이지 구매하기 통신",
         "장바구니 레이아웃 및 통신 (전체삭제, 체크 된 상품 삭제, 개별삭제, 수량변경)",
         "검색 페이지 레이아웃 및 통신"
+      ],
+      "learned": [
+        "Git 의 개념과 동작 원리 학습",
+        "Rest Api 개념 학습",
+        "HTTP METHOD로 백엔드 통신 학습",
+        "Rest Api query 학습",
+        "통신 후 화면 렌더링",
+        "컴포넌트 재사용"
       ],
       "github": "https://github.com/tjwldnjs123/justcode-ale6ix-front"
     },
@@ -27,7 +46,7 @@
       "id": 3,
       "title": "저기어때",
       "content": "video/저기어때.mov",
-      "description": [
+      "implementation": [
         "회원가입 구현",
         "로그인 구현 (+ 카카오로그인 구현)",
         "약관동의 페이지 레이아웃 및 체크박스 구현",
@@ -35,18 +54,29 @@
         "마이페이지 레이아웃 및 닉네임,예약자 이름,휴대폰번호 변경 구현",
         "마이페이지 예약목록 삭제 구현"
       ],
+      "learned": [
+        "NavLink사용해 해당 css적용",
+        "카카오 로그인 공식문서 보면서 토큰 얻어오고 백엔드 통신",
+        "Recoil사용으로 Props Drilling 해결",
+        "Styled-components 학습",
+        "axios 학습 후 적용"
+      ],
       "github": "https://github.com/tjwldnjs123/justcode-6-2nd-team7-front"
     },
     {
       "id": 4,
       "title": "playkeyboard",
       "content": "video/playkeyboard.mov",
-      "description": [
+      "implementation": [
         "fetch 적용해 데이터를 받아 카테고리 구현",
         "카테고리 클릭 시 해당 카테고리 활성화",
         "카테고리 클릭 시 해당 카드 나오게 query이용하여 구현",
         "카드 클릭 시 navigate 적용하여 detail페이지로 이동",
         "반응형 구현(iphone~tablet)"
+      ],
+      "learned": [
+        "반응형 media사용하여 적용(iphone - tablet size)",
+        "가로,세로 스크롤 구현"
       ],
       "github": "https://github.com/tjwldnjs123/playkeyboard-2team"
     },
@@ -54,10 +84,15 @@
       "id": 5,
       "title": "bodit",
       "content": "video/bodit.mov",
-      "description": [
+      "implementation": [
         "달력 모달 창 react-datepicker 라이브러리로 구현",
         "moment.js로 날짜 구현",
         "그래프 및 달력 반응형(desktop~iphone)"
+      ],
+      "learned": [
+        "react-datepicker라이브러리 학습",
+        "반응형 media사용하여 적용(iphone - desktop size)",
+        "Rest Api query 사용해 해당 상태 전달"
       ],
       "github": "https://github.com/tjwldnjs123/bodit-team2"
     }
