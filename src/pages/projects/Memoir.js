@@ -46,6 +46,10 @@ const MemoirContainer = styled.div`
     .back {
       font-size: 25px;
       cursor: pointer;
+
+      @media (max-width: ${({ theme }) => theme.tablet}) {
+        font-size: 20px;
+      }
     }
   }
   .modal-container {
@@ -60,10 +64,18 @@ const MemoirContainer = styled.div`
     h3 {
       font-size: 1.5rem;
       margin-bottom: 2%;
+
+      @media (max-width: ${({ theme }) => theme.tablet}) {
+        font-size: 1rem;
+      }
     }
     p {
       font-size: 1rem;
       line-height: 1.5rem;
+
+      @media (max-width: ${({ theme }) => theme.tablet}) {
+        font-size: 0.6rem;
+      }
     }
   }
 `;

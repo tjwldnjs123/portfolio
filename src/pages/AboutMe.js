@@ -78,6 +78,10 @@ const AboutMeContainer = styled.div`
         padding: 3%;
         font-size: 1.5rem;
         line-height: 2rem;
+
+        @media (max-width: ${({ theme }) => theme.tablet}) {
+          font-size: 0.8rem;
+        }
       }
 
       .content {
@@ -85,17 +89,30 @@ const AboutMeContainer = styled.div`
         padding-bottom: 3%;
         font-size: 1rem;
         line-height: 2rem;
+
+        @media (max-width: ${({ theme }) => theme.tablet}) {
+          font-size: 0.6rem;
+        }
       }
 
       .tech-stack-box {
         .bold {
           font-size: 1.3rem;
           margin-bottom: 2%;
+
+          @media (max-width: ${({ theme }) => theme.tablet}) {
+            font-size: 0.8rem;
+          }
         }
         .tech-btn {
           display: flex;
           justify-content: center;
           align-items: center;
+
+          @media (max-width: ${({ theme }) => theme.tablet}) {
+            flex-wrap: wrap;
+            font-size: 0.7rem;
+          }
 
           p {
             padding: 10px;

@@ -21,7 +21,7 @@ const ProjectList = ({ projectList, active, setActive }) => {
             >
               <GiFallingStar
                 className={active === project.title ? "active-icon" : ""}
-                size="40"
+                size="30"
               />
               <span className={active === project.title ? "active-title" : ""}>
                 {project.title}
@@ -35,24 +35,28 @@ const ProjectList = ({ projectList, active, setActive }) => {
                     : "disabled"
                 }
               >
-                <video autoPlay controls>
+                <video controls>
                   <source src={project.content} type="video/mp4" />
                 </video>
-                <div className="description">
-                  <button onClick={() => setModal((prev) => !prev)}>
-                    회고록 바로가기 💫
-                  </button>
+                <div className="description-box">
+                  <div className="description">
+                    <button onClick={() => setModal((prev) => !prev)}>
+                      {modal ? "동영상 다시보기 💫" : "회고록 바로가기 💫"}
+                    </button>
+                  </div>
                   {modal && <Memoir project={project} setModal={setModal} />}
+                  <div className="github-box">
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <p>github 바로가기</p>
+
+                      <BsGithub />
+                    </a>
+                  </div>
                 </div>
-                <a
-                  href={project.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <p>github으로 바로가기</p>
-                  <AiOutlineArrowRight className="arrow" />
-                  <BsGithub />
-                </a>
               </div>
             )}
           </div>
@@ -77,28 +81,54 @@ const ProjectListContainer = styled.li`
     display: flex;
 
     .active-icon {
-      color: #2786ff;
+      color: #e8aa00;
     }
 
     .project-title {
-      height: 70px;
+      width: 800px;
+      height: 100px;
+      margin-top: 10px;
       text-align: center;
+
+      @media (max-width: 990px) {
+        width: 100px;
+      }
+
+      @media (max-width: ${({ theme }) => theme.tablet}) {
+        width: 80px;
+      }
+      @media (max-width: ${({ theme }) => theme.iphone}) {
+        width: 45px;
+      }
 
       span {
         margin-left: 10px;
-        font-size: 20px;
+        font-size: 16px;
         cursor: pointer;
 
         @media (max-width: ${({ theme }) => theme.tablet}) {
           font-size: 13px;
         }
 
+        @media (max-width: ${({ theme }) => theme.iphone}) {
+          font-size: 8px;
+        }
+
         &:hover {
-          color: #2786ff;
+          color: #e8aa00;
+
+          @media (max-width: ${({ theme }) => theme.iphone}) {
+            font-size: 10px;
+          }
         }
       }
       .active-title {
-        color: #2786ff;
+        /* color: #2786ff; */
+        font-size: 19px;
+        font-weight: 800;
+        @media (max-width: ${({ theme }) => theme.iphone}) {
+          font-size: 10px;
+        }
       }
     }
 
@@ -116,62 +146,92 @@ const ProjectListContainer = styled.li`
       width: 70%;
       height: 80%;
 
-      @media (max-width: 1080px) {
+      /* @media (max-width: 1080px) {
         width: 65%;
-      }
+      } */
 
-      @media (max-width: ${({ theme }) => theme.tablet}) {
-        width: 50%;
-      }
+      /* @media (max-width: ${({ theme }) => theme.tablet}) {
+        width: 100%;
+      } */
       video {
         width: 65%;
         height: 60%;
 
+        /* @media (max-width: ${({ theme }) => theme.tablet}) {
+          width: 80%;
+        } */
+      }
+
+      .description-box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 18%;
+
         @media (max-width: ${({ theme }) => theme.tablet}) {
           width: 80%;
+          margin-top: 50%;
         }
-      }
 
-      .description {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        height: 40%;
-        padding-top: 1%;
+        .description {
+          /* display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center; */
+          width: 100%;
+          /* height: 40%; */
+          /* padding-top: 1%; */
 
-        button {
-          padding: 2%;
-          background-color: transparent;
-          border-radius: 50%;
-          border: none;
-          font-size: 1.5rem;
-          color: lightgray;
-          cursor: pointer;
+          button {
+            padding-bottom: 5%;
+            background-color: transparent;
+            border-radius: 50%;
+            border: none;
+            font-size: 1.2rem;
+            color: lightgray;
+            cursor: pointer;
 
-          &:hover {
-            color: #2786ff;
+            @media (max-width: ${({ theme }) => theme.tablet}) {
+              width: 100px;
+              font-size: 0.7rem;
+            }
+
+            &:hover {
+              border-bottom: 1px solid #e8aa00;
+            }
           }
         }
-      }
 
-      a {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        font-size: 25px;
+        .github-box {
+          border-radius: 50%;
+          border: none;
+          padding-bottom: 3%;
+          width: 300px;
+          &:hover {
+            border-bottom: 1px solid #e8aa00;
+          }
+          a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
 
-        .arrow {
-          margin-right: 10px;
-          font-size: 12px;
-        }
+            .arrow {
+              /* margin-right: 10px; */
+              font-size: 1.2rem;
+            }
 
-        p {
-          margin-right: 10px;
-          font-size: 12px;
-          color: #2786ff;
+            p {
+              margin-right: 10px;
+              font-size: 1.2rem;
+
+              @media (max-width: ${({ theme }) => theme.tablet}) {
+                width: 100px;
+                font-size: 0.7rem;
+                /* margin-right: 3px; */
+              }
+            }
+          }
         }
       }
     }
